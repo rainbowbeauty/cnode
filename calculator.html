@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<link rel="stylesheet" type="text/css" href="css/qbz.css" />
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="js/qbz.js"></script>
+<title>钱帮主</title>
+</head>
+<body>
+<header id="head">
+	<!-- <div class="h_home"><a href="#home"><img src="images/home.png" /></a></div> -->
+	<div class="h_back"><a href="#home"><img src="images/back.png" /></a></div>
+	<div class="h_title">借贷计算器</div>
+	<div class="h_nav" id="nav"><a href="javascript:;"><img src="images/menu.png" /></a></div>
+</header>
+<section id="body">
+	<div class="formbox">
+		 <form method="post" action="login.php">
+			<ul class="formitem">
+				<h3 class="h_nav">借款类型</h3>
+				<li class="p0">
+					<select name="types" class="types">
+						<option value="1">生意周转1</option>
+						<option value="2">生意周转2</option>
+						<option value="3">生意周转3</option>
+						<option value="4">生意周转4</option>
+					</select>
+				</li>
+				<h3 class="h_nav">借款金额(元)</h3>
+				<li>
+					<input  name="qbz_money" type="number" value=""  placeholder='请输入借款金额' class="text" autocomplete="off" >
+				</li>
+				<h3 class="h_nav">年化利率(%)</h3>
+				<li>
+					<input  name="qbz_money" type="number" value=""  placeholder='请输入年利率' class="text" autocomplete="off" >
+				</li>
+				<h3 class="h_nav">借款期限(月)</h3>
+				<li>
+					<input  name="qbz_money" type="number" value=""  placeholder='请输入借款期限' class="text" autocomplete="off" >
+				</li>
+			</ul>
+			<div class="JSresults">计算结果在这里计算结果在这里计算结果在这里</div>
+			<div class="formbtn mt0">
+				<input name="qbz_js" id="JSQ" type="button" value="开始计算" class="button">
+			</div>
+			<div class="formbtn btnreset" >
+				<input name="" id="" type="reset" value="重置" class="button">
+			</div>
+		</form>
+	</div>
+</section>
+<footer id="foot"></footer>
+
+<div id="layer"></div>
+<nav id="menu">
+	<ul class="menulist">
+		<li><a href="#"><img src="images/ico_lc.png" /><span>理财产品</span></a></li>
+		<li><a href="#"><img src="images/ico_dl.png" /><span>登录</span></a></li>
+		<li><a href="#"><img src="images/ico_zc.png" /><span>注册</span></a></li>
+		<li><a href="#"><img src="images/ico_lc.png" /><span>借贷计算器</span></a></li>
+		<li><a href="#"><img src="images/ico_tx.png" /><span>我要提现</span></a></li>
+		<li><a href="#"><img src="images/ico_xg.png" /><span>修改密码</span></a></li>
+		<li><a href="#"><img src="images/ico_mx.png" /><span>明细查询</span></a></li>
+		<li><a href="#"><img src="images/ico_gr.png" /><span>个人中心</span></a></li>
+		<li><a href="#"><img src="images/ico_rz.png" /><span>认证管理</span></a></li>
+		<li><a href="#"><img src="images/ico_tc.png" /><span>安全退出</span></a></li>
+	</ul>
+</nav>
+
+</body>
+</html>

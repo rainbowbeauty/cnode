@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<link rel="stylesheet" type="text/css" href="css/qbz.css" />
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="js/qbz.js"></script>
+<title>钱帮主</title>
+</head>
+<body>
+<header id="head">
+	<!-- <div class="h_home"><a href="#home"><img src="images/home.png" /></a></div> -->
+	<div class="h_back"><a href="#home"><img src="images/back.png" /></a></div>
+	<div class="h_title">我的银行卡</div>
+	<div class="h_nav" id="nav"><a href="javascript:;"><img src="images/menu.png" /></a></div>
+</header>
+<section id="body">
+	<div class="formbox">
+		<div  id="yourcard">
+			<h3 class="h_nav">已绑定银行卡</h3>
+			<div class="formitem">
+				<p class="gminfo"><span>真实姓名：</span><b>王**</b></p>
+				<p class="gminfo"><span>银行账号：</span><b>621******157</b></p>
+			</div>
+			<div class="formitem">
+				 <div class="bdcard"><a href="javascript:;" id="BDYHK"><i>+</i><br>绑定银行卡</a></div>
+			</div>
+		</div> <!-- End yourcard  -->
+		<div class="bankcard" id="bankcard">
+			<form method="post" action="login.php">
+				<h3 class="h_nav">请输入账号及银行信息</h3>
+				<ul class="formitem">
+					<h3 class="h_nav">真实姓名</h3>
+					<li>
+						<input  name="qbz_name" type="text" value=""  placeholder='请输入你在银行开户的真实姓名' class="text" autocomplete="off" >
+					</li>
+					<h3 class="h_nav">银行账号</h3>
+					<li>
+						<input  name="qbz_number" type="number" value=""  placeholder='请输入你的银行卡账号' class="text" autocomplete="off" >
+					</li>
+					<h3 class="h_nav">银行名称</h3>
+					<li class="p0">
+						<select name="types" class="types">
+							<option value="1">中国银行</option>
+							<option value="2">工商银行</option>
+							<option value="3">建设银行</option>
+							<option value="4">农业银行</option>
+						</select>
+					</li>
+					<h3 class="h_nav">银行开户地址</h3>
+					<li class="p0">
+						<select name="province" class="types">
+							<option value="1">广东省</option>
+							<option value="2">湖北省</option>
+							<option value="3">湖南省</option>
+							<option value="4">四川省</option>
+						</select>
+					</li>
+					<li class="p0">
+						<select name="city" class="types">
+							<option value="1">深圳市</option>
+							<option value="2">广州市</option>
+							<option value="3">珠海市</option>
+							<option value="4">佛山市</option>
+						</select>
+					</li>
+					<li>
+						<input  name="address" type="text" value=""  placeholder='请输入开户行支行名称' class="text" autocomplete="off" >
+					</li>
+					<li>
+						<input  name="qbz_code" type="number" value=""  placeholder='请输入手机验证码' class="text" autocomplete="off" >
+						<div class="getPhoneCode"><button type="button">获取验证码</button><!--<button class="disabled">60秒后获取</button>--></div>
+					</li>
+				</ul>
+				<div class="formbtn2">
+					<input name="qbz_add" id="ADD" type="button" value="提交" class="button">
+				</div>
+			</form>
+		</div> <!-- End bankcard  -->
+	</div>
+</section>
+<footer id="foot"></footer>
+
+<div id="layer"></div>
+<nav id="menu">
+	<ul class="menulist">
+		<li><a href="#"><img src="images/ico_lc.png" /><span>理财产品</span></a></li>
+		<li><a href="#"><img src="images/ico_dl.png" /><span>登录</span></a></li>
+		<li><a href="#"><img src="images/ico_zc.png" /><span>注册</span></a></li>
+		<li><a href="#"><img src="images/ico_lc.png" /><span>借贷计算器</span></a></li>
+		<li><a href="#"><img src="images/ico_tx.png" /><span>我要提现</span></a></li>
+		<li><a href="#"><img src="images/ico_xg.png" /><span>修改密码</span></a></li>
+		<li><a href="#"><img src="images/ico_mx.png" /><span>明细查询</span></a></li>
+		<li><a href="#"><img src="images/ico_gr.png" /><span>个人中心</span></a></li>
+		<li><a href="#"><img src="images/ico_rz.png" /><span>认证管理</span></a></li>
+		<li><a href="#"><img src="images/ico_tc.png" /><span>安全退出</span></a></li>
+	</ul>
+</nav>
+
+<script type="text/javascript">
+;(function(){
+	$(function(){
+		//添加/修改 银行卡
+		$('#BDYHK').on('click',function(e){
+			 $('#yourcard').slideUp('400',function(){
+			     $('#bankcard').slideDown();
+			 });
+		});
+		//提交银行卡信息
+		$('#ADD').on('click',function(e){
+			Tips.confirm('确定绑定这张银卡吗？',function(ok){
+			 	if(ok){
+			 		//$.ajax({});
+			 		Tips.alert('绑定成功！',function(){
+			 			//setTimeout(function(){
+			 				//location.href='account.html';
+			 				//history.back();
+			 				location.reload(true);		
+			 			//},100);
+			 		})		
+			 	}
+			 });
+		});
+	});
+}());
+</script>
+
+</body>
+</html>

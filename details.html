@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<link rel="stylesheet" type="text/css" href="css/qbz.css" />
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="js/qbz.js"></script>
+<title>钱帮主</title>
+</head>
+<body>
+<header id="head">
+	<!-- <div class="h_home"><a href="#home"><img src="images/home.png" /></a></div> -->
+	<div class="h_back"><a href="#home"><img src="images/back.png" /></a></div>
+	<div class="h_title">项目详情</div>
+	<div class="h_nav" id="nav"><a href="javascript:;"><img src="images/menu.png" /></a></div>
+</header>
+<section id="body">
+	<ul class="iteminfo">
+		<li>
+			<h3>个人生意周转</h3>
+			<p>年化利率：<strong>15%</strong></p>
+		</li>
+		<li>
+			<div class="jdt" style="background-position: -67px 0;"></div>
+		</li>
+	</ul>
+	<section  id="tabs">
+		<ul class="navlinks">
+			<li><a href="javascript:;">项目详情</a></li>
+			<li><a href="javascript:;">投资记录</a></li>
+		</ul>
+		<div class="itemlist">
+			<div class="aitem">
+			<ul>
+				<li><span>可投金额</span><b>150000.00元</b></li>
+				<li><span>年化利率</span><b>15%</b></li>
+				<li><span>还款期限</span><b>3个月</b></li>
+				<li><span>借款金额</span><b>150000.00元</b></li>
+				<li><span>还款方式</span><b>按月付息到期还本</b></li>
+				<li><span>月还本息</span><b>1500.00元</b></li>
+				<li><span>剩余时间</span><b>2天12时24分00秒</b></li>
+				<li><span>项目编号</span><b>xxxxxxxxxxxx</b></li>
+			</ul>
+			</div>
+			<div class="aitem">
+			<ul class="alist">
+				<li><span>刘xx投资了<i>50000.00元</i></span><b>2015-08-10</b></li>
+				<li><span>刘xx投资了<i>50000.00元</i></span><b>2015-08-10</b></li>
+				<li><span>刘xx投资了<i>50000.00元</i></span><b>2015-08-10</b></li>
+				<li><span>刘xx投资了<i>50000.00元</i></span><b>2015-08-10</b></li>
+				<li><span>刘xx投资了<i>50000.00元</i></span><b>2015-08-10</b></li>
+				<li><span>刘xx投资了<i>50000.00元</i></span><b>2015-08-10</b></li>
+			</ul>
+			</div>
+		</div>
+	</section>
+	<div class="footbox"><a href="invest.html">投资</a></div>
+	<!-- <div class="footbox"><a href="login.html">登录</a></div> -->
+</section>
+<footer id="foot"></footer>
+
+<div id="layer"></div>
+<nav id="menu">
+	<ul class="menulist">
+		<li><a href="#"><img src="images/ico_lc.png" /><span>理财产品</span></a></li>
+		<li><a href="#"><img src="images/ico_lc.png" /><span>理财产品</span></a></li>
+		<li><a href="#"><img src="images/ico_dl.png" /><span>登录</span></a></li>
+		<li><a href="#"><img src="images/ico_zc.png" /><span>注册</span></a></li>
+		<li><a href="#"><img src="images/ico_lc.png" /><span>借贷计算器</span></a></li>
+		<li><a href="#"><img src="images/ico_tx.png" /><span>我要提现</span></a></li>
+		<li><a href="#"><img src="images/ico_xg.png" /><span>修改密码</span></a></li>
+		<li><a href="#"><img src="images/ico_mx.png" /><span>明细查询</span></a></li>
+		<li><a href="#"><img src="images/ico_gr.png" /><span>个人中心</span></a></li>
+		<li><a href="#"><img src="images/ico_rz.png" /><span>认证管理</span></a></li>
+		<li><a href="#"><img src="images/ico_tc.png" /><span>安全退出</span></a></li>
+	</ul>
+</nav>
+<script type="text/javascript" src="js/mTabs.min.js"></script>
+<script type="text/javascript">
+//滚动图
+;(function(){
+	$(function(){
+		new mTabs({
+			mtab: '#tabs',
+			mhead: '#tabs .navlinks',
+			mcontent: '#tabs .itemlist',
+			current: 'active',
+			tagname: 'A'
+		});
+	});
+}());
+</script>
+</body>
+</html>

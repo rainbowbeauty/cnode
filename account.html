@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<link rel="stylesheet" type="text/css" href="css/qbz.css" />
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="js/qbz.js"></script>
+<title>钱帮主</title>
+</head>
+<body>
+<header id="head">
+	<!-- <div class="h_home"><a href="#home"><img src="images/home.png" /></a></div> -->
+	<div class="h_back"><a href="#home"><img src="images/back.png" /></a></div>
+	<div class="h_title">个人中心</div>
+	<div class="h_nav" id="nav"><a href="javascript:;"><img src="images/menu.png" /></a></div>
+</header>
+<section id="body">
+	<ul class="qbz_info">
+        <li class="name"><h3>用户姓名：<span>1000</span></h3></li>
+        <li class="integration"><h3>用户积分：<span>1000</span></h3></li>
+        <li class="interest"><h3>已赚利息(元)：<strong>10000.00</strong></h3></li>
+        <li class="QRcode"><div id="QRcode"><img src="https://www.qbzvip.com/data/avatar/335_avatar_middle.jpg" /></div></li>        
+    </ul>
+    <div class="invite-url">
+        <h3>邀请链接：</h3>
+        <div id="msg_links" rows="3" cols="50">http://qbzvip.com/index.php?user&q=reginvite&u=cmVnX2ludml0ZTMzNQ== </div>
+    </div>
+    <ul class="qbz_us">
+    	<li class="a1">
+        	<h3>可用余额（元）</h3>
+        	<p>100</p>
+        </li>
+        <li class="a2">
+        	<h3>待收总额（元）</h3>
+        	<p>100</p>
+        </li>
+    </ul>
+    <ul class="qbz_us">
+    	<li class="a3">
+        	<h3>冻结金额（元）</h3>
+        	<p>100</p>
+        </li>
+        <li class="a4">
+        	<h3>账户总额（元）</h3>
+        	<p>100</p>
+        </li>
+    </ul>
+    <div class="qbz_other">
+     	<a href="#" class="out">安全退出</a> 
+      	<a href="#" class="back">返回活动</a>
+    </div>
+    <div class="footbtn"><a href="recharge.html">充值</a><a href="withdrawal.html">提现</a></div>
+</section>
+<footer id="foot"></footer>
+
+<div id="layer"></div>
+<nav id="menu">
+	<ul class="menulist">
+		<li><a href="#"><img src="images/ico_lc.png" /><span>理财产品</span></a></li>
+		<li><a href="#"><img src="images/ico_dl.png" /><span>登录</span></a></li>
+		<li><a href="#"><img src="images/ico_zc.png" /><span>注册</span></a></li>
+		<li><a href="#"><img src="images/ico_lc.png" /><span>借贷计算器</span></a></li>
+		<li><a href="#"><img src="images/ico_tx.png" /><span>我要提现</span></a></li>
+		<li><a href="#"><img src="images/ico_xg.png" /><span>修改密码</span></a></li>
+		<li><a href="#"><img src="images/ico_mx.png" /><span>明细查询</span></a></li>
+		<li><a href="#"><img src="images/ico_gr.png" /><span>个人中心</span></a></li>
+		<li><a href="#"><img src="images/ico_rz.png" /><span>认证管理</span></a></li>
+		<li><a href="#"><img src="images/ico_tc.png" /><span>安全退出</span></a></li>
+	</ul>
+</nav>
+
+<script type="text/javascript" src="js/jquery.qrcode.min.js"></script>
+<script type="text/javascript">
+;(function(){
+//生成二维码
+$(function(){ 
+    $('#QRcode').qrcode({
+        width:100,
+        height:100,
+        text: 'http://www.qbzvip.com/index.php?user&q=reginvite&u=cmVnX2ludml0ZTMzNA=='
+    });
+});
+}());
+</script>
+</body>
+</html>
