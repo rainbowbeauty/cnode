@@ -40,3 +40,20 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 	});
 }());
 
+//提示等待蒙版
+;(function(){
+	$(function(){
+		window.MB = {
+			create: function(){
+				MB.div = $('<div id="MB"></div>').appendTo('body');
+			},
+			open: function(){
+				if(!MB.div) MB.create();
+				MB.div.fadeIn(200);
+			},
+			close: function(){
+				MB.div.fadeOut(200);
+			}
+		};
+	});
+}());
